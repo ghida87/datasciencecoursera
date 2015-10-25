@@ -8,8 +8,8 @@ FeaturesNames <- read.tale("~/UCI HAR Dataset/features.txt")
 colnames(mSET) <- FeaturesNames[,2]
 # Using column names matching in order to extract columns corresponding to mean() and std()
 # # measurements from merged dataset
-mSET2 <- mSET[,which(grepl("mean()",colnames(mSET))==TRUE | grepl("std()",colnames(MSET))==TRUE)]
-mSET3 <- mSET2[,which(grepl("Freq",colnames(mSET2))==FALSE)]
+mSET1 <- mSET[,which(grepl("mean()",colnames(mSET))==TRUE | grepl("std()",colnames(MSET))==TRUE)]
+mSET2 <- mSET1[,which(grepl("Freq",colnames(mSET1))==FALSE)]
 Labels <- read.table("~/UCI HAR Dataset/activity_labels.txt")
 Activitiestest <- read.table("~/UCI HAR Dataset/test/y_test.txt")
 Activitiestrain <- read.table("~/UCI HAR Dataset/train/y_train.txt")
